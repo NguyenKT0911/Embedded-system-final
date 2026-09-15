@@ -40,7 +40,7 @@
 Test thành công tập lệnh R-type, J-type va sw, lw va beq 
 
 
-# Báo cáo tiến độ – AI Accelerator
+# AI Accelerator
 
 ## Báo cáo tuần 1
 
