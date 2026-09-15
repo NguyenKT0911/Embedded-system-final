@@ -31,11 +31,11 @@
 - Hoàn thành tập lệnh J-type
 - Thêm các lệnh load(lw), store(sw), branch(beq) cho datapath.
 
-![PC](Week_4/images/PC.png)
+![PC](https://github.com/NguyenKT0911/Embedded-system-final/blob/RICS-V/Week_4/images/PC.png?raw=true)
 
-![R_J_type](Week_4/images/R_J_type.png)
+![R_J_type](https://github.com/NguyenKT0911/Embedded-system-final/blob/RICS-V/Week_4/images/R_J_type.png?raw=true)
 
-![sw_lw_beq](Week_4/images/sw_lw_beq.png)
+![sw_lw_beq](https://github.com/NguyenKT0911/Embedded-system-final/blob/RICS-V/Week_4/images/sw_lw_beq.png?raw=true)
 
 Test thành công tập lệnh R-type, J-type va sw, lw va beq 
 
