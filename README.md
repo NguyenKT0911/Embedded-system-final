@@ -10,10 +10,12 @@
 - Hoàn thành tập lệnh J-type
 - Thêm các lệnh load(lw), store(sw), branch(beq) cho datapath.
 
-![Instructions](Week_3/images/anh1.png)
+![PC](Week_4/images/PC.png)
 
-![Register values](Week_3/images/anh2.png)
+![R_J_type](Week_4/images/R_J_type.png)
 
-Test thành công tập lệnh R và J-type
+![sw_lw_beq](Week_4/images/sw_lw_beq.png)
+
+Test thành công tập lệnh R-type, J-type va sw, lw va beq 
 
   
