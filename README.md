@@ -1,7 +1,6 @@
 # Embedded-system-final
-## Báo cáo tuần 1
-- Tìm nội dung đề tài báo cáo: RICS-V + AI + Linux
 ## Báo cáo tuần 2
+- Tìm nội dung đề tài báo cáo: RICS-V + AI + Linux
 - Tìm hiểu RICS-V: Phân loại, kiến trúc, data path, tập lệnh
 ## Báo cáo tuần 3
 - Bắt đầu làm RICS-V single cycle
