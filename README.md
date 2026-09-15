@@ -19,7 +19,7 @@
 *  kết hợp chạy chung và quan sát kết quả
 
 
-# Risk-V
+# RICS-V
 ---
 ## Báo cáo tuần 2
 - Tìm nội dung đề tài báo cáo: RICS-V + AI + Linux
