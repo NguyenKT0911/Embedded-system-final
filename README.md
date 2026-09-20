@@ -17,4 +17,8 @@
 
 Test thành công tập lệnh R-type, J-type va sw, lw va beq 
 
+## Báo cáo tuần 5
+- Hoàn thành RICS-V single cycle
+- Lên dàn ý báo cáo
+- Assembly cho Instruction memory
   
