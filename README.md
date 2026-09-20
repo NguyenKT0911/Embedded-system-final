@@ -77,7 +77,7 @@ Test thành công tập lệnh R-type, J-type va sw, lw va beq
 ## Báo cáo tuần 5
 
 - Tăng Accuracy từ 92.6% lên 99.5%
-- 
+- Viết cơ sở lý thuyết về AI Model
 
 
   
