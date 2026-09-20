@@ -74,6 +74,11 @@ Test thành công tập lệnh R-type, J-type va sw, lw va beq
 - Tạo Golden Output INT32 để phục vụ kiểm chứng RTL.
 - Chuẩn bị test vector cho quá trình thiết kế và verification AI Accelerator.
 
+## Báo cáo tuần 5
+
+- Tăng Accuracy từ 92.6% lên 99.5%
+- 
+
 
   
 
