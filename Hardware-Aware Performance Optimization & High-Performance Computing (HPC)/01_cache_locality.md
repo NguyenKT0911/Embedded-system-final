@@ -73,11 +73,11 @@ gcc -O0 cache_test.c -o cache_test
 ![Cache Locality Benchmark Result](images/cache_benchmark.png)
 
 ### Performance Measurements
+
 | Traversal Order | Memory Stride | Cache Behavior | Execution Time (s) | Relative Performance |
 | :--- | :--- | :--- | :--- | :--- |
-| **Row-Major (`i` then `j`)** | $+4\text{ bytes}$ | **Cache Hit** | **1.297641 s** | **2.55x Speedup (Baseline)** |
-| **Column-Major (`j` then `i`)** | $+40,000\text{ bytes}$ | **Cache Miss** | **3.310407 s** | **Baseline (255.1% Slower)** |
-
+| **Row-Major (`i` then `j`)** | `+4 bytes` | Cache Hit | **0.990086 s** | **~3.35x Speedup** |
+| **Column-Major (`j` then `i`)** | `+40,000 bytes` | Cache Miss | **3.316319 s** | Baseline (~234.9% Slower) |
 ---
 
 ## 5. Key Engineering Insights
