@@ -1,107 +1,39 @@
-# Technical Report: Compiler Optimization (GCC) and Parallel Computing (OpenMP)
+# 3. C/C++ Optimization (Kỹ thuật Tối ưu Hóa Mã Nguồn Hạng Nặng)
 
-## 1. Experimental Objectives
-This benchmark evaluates the latency impact of software-level and hardware-level execution optimizations for heavy numerical workloads:
-* **Compiler Optimization Passes:** Measure the efficiency of GCC `-O3` vectorization and instruction pipelining relative to unoptimized `-O0` baseline code.
-* **User-Space Parallelism (OpenMP):** Quantify execution overhead and performance scaling when distributing dense matrix operations across concurrent threads.
+*Bối cảnh học thuật: Các Framework AI hiện đại như TensorFlow hay PyTorch luôn duy trì mô hình phân lớp. Tầng trên là Python (High-level AI Application) đóng vai trò giao diện dễ phát triển, trong khi các phép toán lõi (Optimized Computation) được chuyển giao hoàn toàn xuống tầng C/C++ để khai thác năng lực CPU/SIMD.*
 
----
+## Kỹ thuật Tối ưu Hóa C/C++ Cấp thấp
 
-## 2. Theoretical Architecture & OS Fundamentals
+### 1. Compiler Optimization (`-O2`, `-O3`)
+Đừng tối ưu bằng tay những thứ Compiler có thể làm. GCC/Clang cung cấp các cờ (flags) để tự động hóa:
+*   **`-O2`:** Tối ưu hóa mức độ cao mà không làm phình kích thước file nhị phân. Bao gồm xóa mã chết (dead code elimination), lập lịch lệnh (instruction scheduling).
+*   **`-O3`:** Tối ưu hóa cực đoan (Aggressive optimization). Trình biên dịch sẽ cố gắng dự đoán nhánh (branch prediction), gỡ cuộn vòng lặp (loop unrolling) và quan trọng nhất là Tự động Vector hóa (Auto-vectorization) các phép toán vô hướng thành toán SIMD.
 
-### 2.1. GCC Optimization Levels (`-O0` vs. `-O3`)
-* **`-O0` (Baseline / No Optimization):** Emits straightforward assembly corresponding directly to source statements. Intermediate scalar values reside strictly in memory/stack frames, leading to frequent CPU memory stalls.
-* **`-O3` (High-Performance Vectorization):**
-  * **Loop Vectorization (SIMD):** Packs multiple floating-point elements into dedicated CPU vector registers (SSE/AVX), computing multiple arithmetic operations within a single clock cycle.
-  * **Register Allocation & Loop Unrolling:** Maximizes register residency and minimizes branch prediction misses.
+### 2. Inline function (`inline` keyword)
+Hàm (Function) sinh ra chi phí (overhead) lưu tham số vào Stack và nhảy lệnh (jump). Khai báo `inline` yêu cầu Compiler bê nguyên nội dung của hàm đó chèn trực tiếp vào nơi gọi. Cực kỳ hiệu quả cho các hàm tính toán ngắn, lặp lại hàng triệu lần (ví dụ: hàm kích hoạt ReLU).
 
-### 2.2. OpenMP Threading & Execution Cost
-The `#pragma omp parallel for` directive instructs the runtime to schedule loop iterations across a dynamic thread pool:
-* **Thread Scheduling:** Iterations of the outer loop are split among worker threads managed by the Linux scheduler.
-* **Execution Overhead:** Spawning worker threads, barrier synchronization, cache coherence maintenance, and kernel context transitions introduce non-negligible latency penalties.
+### 3. Pointer & Aliasing
+*   **Con trỏ (Pointer):** Cho phép can thiệp trực tiếp vào địa chỉ vùng nhớ vật lý.
+*   **Pointer Aliasing:** Khi 2 con trỏ cùng trỏ về một vùng nhớ, Compiler sẽ không dám tối ưu hóa vòng lặp vì sợ sai lệch dữ liệu. Sử dụng từ khóa `restrict` (trong C) báo cho Compiler biết con trỏ này là độc quyền, giúp Compiler mạnh dạn đưa biến vào thanh ghi (Register) để chạy nhanh hơn.
 
----
+### 4. Memory Alignment (Căn chỉnh bộ nhớ)
+CPU không đọc từng byte mà đọc từng khối (Cache Line, thường là 64 bytes).
+*   Nếu một ma trận dữ liệu bắt đầu ở địa chỉ chia hết cho 64 (Align), CPU chỉ cần 1 chu kỳ để lấy lên Cache.
+*   Nếu dữ liệu nằm vắt ngang giữa hai Cache Line (Unaligned), CPU phải thực hiện 2 chu kỳ nạp bộ nhớ, giảm 50% hiệu suất. Trong C, ta dùng `posix_memalign()` hoặc các từ khóa căn chỉnh của Compiler để ép dữ liệu vào đúng biên bộ nhớ.
 
-## 3. Benchmark Implementation (`matmul.c`)
-The benchmark executes dense matrix multiplication ($C = A \times B$) with matrices sized $1024 \times 1024$ (over 1 billion floating-point Multiply-Accumulate operations):
+### 5. Cache Optimization (Tối ưu hóa thân thiện Cache)
+*   **Loop Tiling (Chia gạch vòng lặp):** Trong phép nhân ma trận lớn $O(N^3)$, nếu kích thước ma trận vượt quá dung lượng L1/L2 Cache, sẽ sinh ra Cache Miss liên tục. Kỹ thuật Loop Tiling bẻ ma trận lớn thành các khối (block/tile) nhỏ vừa vặn với kích thước Cache L1, xử lý dứt điểm từng khối rồi mới đi tiếp, tăng tỷ lệ Cache Hit (trúng bộ nhớ đệm) lên tối đa.
 
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <omp.h>
+### 6. SIMD Intrinsics (Hàm nội tại SIMD)
+Khi tính năng Auto-vectorization của Compiler (`-O3`) không đủ thông minh, lập trình viên C/C++ sẽ sử dụng bộ thư viện `<immintrin.h>`.
+*   Đây là các lệnh cung cấp quyền truy cập trực tiếp vào tập lệnh AVX/AVX-512 của phần cứng.
+*   *Ví dụ:* `_mm256_loadu_ps` (Nạp 8 số float vào thanh ghi 256-bit), `_mm256_fmadd_ps` (Nhân cộng chập Fused Multiply-Add), giúp tính ma trận nhanh hơn từ 8-16 lần so với vòng lặp `for` thông thường.
 
-#define SIZE 1024
+### 7. OpenMP (Open Multi-Processing)
+Tiêu chuẩn công nghiệp để triển khai Đa luồng (Multi-threading) trên bộ nhớ chia sẻ.
+*   Thay vì phải khởi tạo Pthreads thủ công phức tạp (khai báo mutex, quản lý vòng đời thread), lập trình viên chỉ cần chèn chỉ thị Tiền xử lý (Preprocessor directive) trước vòng lặp:
+    `#pragma omp parallel for`
+*   OpenMP sẽ tự động chia đều (fork) số lần lặp của vòng lặp cho tất cả các Core vật lý hiện có của CPU để xử lý song song, sau đó gom lại (join) ở cuối tiến trình.
 
-double get_time() {
-    struct timespec ts;
-    clock_gettime(CLOCK_MONOTONIC, &ts);
-    return ts.tv_sec + ts.tv_nsec * 1e-9;
-}
-
-int main() {
-    float *A = (float *)malloc(SIZE * SIZE * sizeof(float));
-    float *B = (float *)malloc(SIZE * SIZE * sizeof(float));
-    float *C = (float *)malloc(SIZE * SIZE * sizeof(float));
-
-    for (int i = 0; i < SIZE * SIZE; i++) {
-        A[i] = 1.0f;
-        B[i] = 2.0f;
-        C[i] = 0.0f;
-    }
-
-    printf("Bat dau nhan ma tran %dx%d...\n", SIZE, SIZE);
-    double start = get_time();
-
-    #pragma omp parallel for
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
-            float sum = 0.0f;
-            for (int k = 0; k < SIZE; k++) {
-                sum += A[i * SIZE + k] * B[k * SIZE + j];
-            }
-            C[i * SIZE + j] = sum;
-        }
-    }
-
-    double end = get_time();
-    printf("Thoi gian hoan thanh: %f giay\n", end - start);
-
-    free(A); free(B); free(C);
-    return 0;
-}
-
---- 
-
-## 4. Empirical Evaluation & Visual Verification
-
-### Verification Artifact
-![OpenMP Benchmark Output](images/omp_benchmark.png)
-
-### Performance Benchmark Data
-The execution times recorded across identical input matrices on the target system are summarized below:
-
-| Optimization Level | Compiler & Execution Flags | Latency (s) | Speedup Factor vs. Baseline | Performance Class |
-| :--- | :--- | :--- | :--- | :--- |
-| **Baseline (Scalar)** | `gcc -O0 matmul.c -o matmul_O0` | **4.917232 s** | 1.00x | Memory-Stalled Scalar Execution |
-| **Compiler Vectorized** | `gcc -O3 matmul.c -o matmul_O3` | **0.399052 s** | **~12.32x Faster** | Vectorized SIMD Pipelining |
-| **Multithreaded Parallel** | `gcc -O3 -fopenmp matmul.c -o matmul_omp` | **0.486718 s** | **~10.10x Faster** | Parallelized with Thread Contention |
-
----
-
-## 5. Technical Root-Cause Analysis (OS & Hardware Perspective)
-
-### 5.1. GCC Vectorization Superiority (`-O3`)
-Enabling `-O3` produced an execution latency drop from **4.917 s** down to **0.399 s**, achieving a **~12.32x acceleration**. This gain is driven by automated SIMD vectorization and register caching, bypassing redundant DRAM accesses without modifying the algorithmic structure.
-
-### 5.2. Detailed Analysis: Why OpenMP (0.486 s) Was Slower Than Single-Thread `-O3` (0.399 s)
-The empirical observation that the multithreaded binary was ~0.087 s slower than the optimized single-threaded binary highlights fundamental operating system trade-offs under virtualized resource constraints:
-1. **Virtual CPU Core Saturation (Core Contention):** In a virtualized guest environment with limited allocated vCPUs, OpenMP worker threads cannot achieve true simultaneous hardware concurrency. Multiple threads compete for identical physical processing cycles.
-2. **Context Switching Penalties:** The Linux Completely Fair Scheduler (CFS) must repeatedly preempt running threads, store CPU register contexts to RAM/stack, and restore alternative thread states, introducing execution stalls.
-3. **Synchronization & Barrier Latency:** Because `-O3` reduced computational runtime to only ~0.39 s, the relative proportion of time consumed by thread pool initialization, iteration chunking, and final barrier synchronization (`join`) became a substantial performance bottleneck.
-
----
-
-## 6. Industrial Systems & Edge Computing Implications
-* **Compiler Optimization as Primary Step:** In resource-constrained single-core microcontrollers or low-tier edge nodes, maximizing compiler flags (`-O3`, loop unrolling) delivers substantial speedups without adding codebase complexity.
-* **Concurrency Trade-Off Consideration:** Parallel threading libraries (OpenMP/pthreads) are only advantageous when the execution duration significantly outweighs thread management overhead and sufficient independent hardware cores are physically provisioned.
+> **Tiến trình vắt kiệt hiệu năng (Evolution of Performance):**
+> Mã C nguyên thủy (Single Thread) $\rightarrow$ Tích hợp OpenMP (Chạy đa nhân) $\rightarrow$ Tích hợp SIMD (Song song hóa dữ liệu trên mỗi nhân) $\rightarrow$ Tối đa hóa phần cứng.

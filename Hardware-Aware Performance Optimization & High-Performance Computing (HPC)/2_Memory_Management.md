@@ -1,91 +1,42 @@
-# Technical Report: Dynamic Heap Allocation Overhead vs. Fixed-Size Memory Pool Optimization
+# 2. Memory Management (Quản trị Hệ thống Bộ nhớ)
 
-## 1. Executive Summary & Problem Formulation
-In real-time embedded systems, kernel-level drivers, and deterministic networking stacks, reliance on generic dynamic heap allocators (`malloc()` and `free()`) introduces two primary failure modes:
-* **Non-Deterministic Latency (Jitter):** General-purpose heap allocators exhibit variable search times when traversing boundary tags and free-lists.
-* **External Heap Fragmentation:** Repeated allocation and deallocation of variable-sized memory segments fragment physical address space, eventually causing allocation failures despite sufficient total free memory.
+*Bối cảnh học thuật: Các mô hình AI/Deep Learning làm việc với các khối Tensor (ma trận đa chiều) có kích thước khổng lồ. Việc quản trị bộ nhớ kém không chỉ gây cạn kiệt tài nguyên (OOM - Out of Memory) mà còn làm giảm tốc độ suy luận (Inference speed) do chi phí (overhead) của Hệ điều hành.*
 
-This benchmark quantifies the latency divergence between the standard GNU C Library (`glibc`) heap manager and an application-managed **Fixed-Size Memory Pool** (Slab/Block Allocator).
+## I. Linux Memory (Quản lý cấp hệ điều hành)
 
----
+### 1. Virtual Memory & Physical Memory
+*   **Virtual Memory (Bộ nhớ ảo):** Abstraction (lớp trừu tượng) do Kernel cung cấp. Mỗi tiến trình tưởng rằng nó đang sở hữu toàn bộ không gian RAM tĩnh.
+*   **Physical Memory (Bộ nhớ vật lý):** Dung lượng RAM thực tế gắn trên bo mạch chủ. Khối quản lý bộ nhớ (MMU - Memory Management Unit) trên CPU chịu trách nhiệm dịch địa chỉ ảo sang địa chỉ vật lý.
 
-## 2. Microarchitectural Theory & Allocator Mechanics
+### 2. Page & Page Fault
+*   **Page (Trang nhớ):** Bộ nhớ ảo và vật lý được chia thành các khối có kích thước cố định (thường là 4KB). Quá trình ánh xạ được thực hiện trên từng Page thông qua Page Table.
+*   **Page Fault (Lỗi trang):** Xảy ra khi CPU truy xuất một địa chỉ ảo chưa được ánh xạ vào RAM vật lý (hoặc đã bị tống xuống ổ cứng). HĐH phải kích hoạt ngắt (interrupt) để nạp trang đó từ ổ cứng vào RAM, gây ra độ trễ I/O khổng lồ.
 
-### 2.1. The Cost of General Heap Allocations (`malloc` / `free`)
-The `glibc` memory allocator (`ptmalloc3`) is designed for general workloads across diverse block sizes. Its operational overhead includes:
-* **Metadata Tracking:** Each chunk requires chunk headers (size tags, flags), consuming memory bandwidth and cache capacity.
-* **Bin Traversal & Splitting:** Allocating a block requires finding an appropriate bin (fastbins, smallbins, unsorted bins), potentially causing linked-list traversals and cache evictions.
-* **System Call Invocations:** If heap bounds are exceeded, the allocator issues `brk()` or `mmap()` system calls, forcing expensive user-to-kernel context switches.
+### 3. Swap (Không gian tráo đổi)
+Vùng không gian trên ổ cứng (HDD/SSD) được dùng làm RAM phụ. Khi RAM vật lý đầy, Kernel sẽ đẩy các Pages ít dùng nhất (LRU thuật toán) xuống Swap. Truy cập vào Swap chậm hơn RAM hàng ngàn lần.
 
-### 2.2. Deterministic Memory Pool Architecture
-A fixed-size memory pool eliminates structural overhead by pre-allocating a contiguous memory buffer during system initialization:
-* **$O(1)$ Deterministic Pop:** Memory allocations detach the top block pointer from an internal singly-linked free list in a single memory dereference.
-* **$O(1)$ Deterministic Push:** Deallocations return the block pointer directly to the head of the free list without memory coalescing.
-* **Zero External Fragmentation:** All allocation units are homogeneous in size; physical memory reusability is deterministic.
+### 4. Memory mapping (`mmap()`)
+Hệ thống lệnh POSIX cho phép ánh xạ trực tiếp không gian bộ nhớ của tiến trình vào một tệp (file) hoặc một thiết bị phần cứng. Nó bỏ qua bộ đệm của không gian người dùng (user-space buffer), tăng tốc độ đọc/ghi dữ liệu lớn.
 
----
+### 5. Copy-on-write (CoW - Sao chép khi ghi)
+Khi dùng lệnh `fork()` để tạo Process con, Kernel không copy toàn bộ RAM của Process cha. Cả hai dùng chung một vùng nhớ vật lý (chỉ đọc). Chỉ khi một Process cố tình "ghi/chỉnh sửa", Kernel mới cấp phát một Page mới để copy dữ liệu sang.
 
-## 3. Implementation Blueprint (`mem_pool_test.c`)
-The benchmark executes sustained allocation-deallocation cycles of fixed-size data blocks (64 bytes) to emulate embedded packet buffering:
+## II. C/C++ Memory (Quản lý cấp ngôn ngữ)
 
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+*   **Stack allocation:** Cấp phát tĩnh bởi Compiler. Các biến cục bộ được đẩy (push) và lấy (pop) ra khỏi Stack cực nhanh bằng cách dịch chuyển con trỏ Stack Pointer. Dung lượng rất nhỏ (thường ~8MB trên Linux).
+*   **Heap allocation:** Cấp phát động khi Runtime. Kích thước khổng lồ, quản lý rải rác.
+*   **`malloc()` & `free()`:** API tiêu chuẩn của C để xin Kernel cấp phát (brk, sbrk) và trả lại bộ nhớ Heap. Quá trình tìm kiếm vùng nhớ trống trong Heap tốn nhiều chi phí thời gian.
+*   **Memory leak (Rò rỉ bộ nhớ):** Khi cấp phát `malloc()` nhưng bỏ quên không `free()`. Khối RAM đó bị khóa vĩnh viễn cho đến khi tiến trình bị OS tiêu diệt.
+*   **Buffer overflow (Tràn bộ đệm):** Hành vi ghi dữ liệu vượt quá kích thước vùng nhớ được cấp, dẫn đến ghi đè lên các vùng dữ liệu lân cận hoặc mã điều khiển hệ thống, gây lỗi Segmentation Fault.
 
-#define NUM_ALLOCS 100000
-#define BLOCK_SIZE 64
+## III. AI Performance (Tối ưu hóa bộ nhớ cho AI)
 
-typedef struct Block {
-    struct Block* next;
-} Block;
+Mô hình chống chỉ định trong AI: `Load Data -> Allocate -> Free -> Allocate -> Free`.
 
-typedef struct {
-    char* buffer;
-    Block* free_list;
-} MemoryPool;
-
-MemoryPool* create_pool(size_t block_size, size_t num_blocks) {
-    MemoryPool* pool = (MemoryPool*)malloc(sizeof(MemoryPool));
-    pool->buffer = (char*)malloc(block_size * num_blocks);
-    pool->free_list = (Block*)pool->buffer;
-
-    Block* current = pool->free_list;
-    for (size_t i = 0; i < num_blocks - 1; ++i) {
-        current->next = (Block*)((char*)current + block_size);
-        current = current->next;
-    }
-    current->next = NULL;
-    return pool;
-}
-
-void* pool_alloc(MemoryPool* pool) {
-    if (!pool->free_list) return NULL;
-    Block* block = pool->free_list;
-    pool->free_list = pool->free_list->next;
-    return block;
-}
-
-void pool_free(MemoryPool* pool, void* ptr) {
-    Block* block = (Block*)ptr;
-    block->next = pool->free_list;
-    pool->free_list = block;
-}
-## 4. Empirical Evaluation & Visual Verification
-
-### Verification Artifact
-![Memory Pool Benchmark Output](images/mem_pool_benchmark.png)
-
-### Quantitative Metrics
-The evaluation compares standard heap operations against the fixed-size memory pool allocator under the identical test configuration:
-
-| Memory Management Strategy | Algorithmic Complexity | Execution Latency (s) | Relative Speedup | Latency Profile |
-| :--- | :--- | :--- | :--- | :--- |
-| **Standard Dynamic (`malloc` / `free`)** | Variable / $O(N)$ worst-case | **0.002845 s** | Baseline | High Jitter (Unbounded) |
-| **Fixed-Size Memory Pool** | Deterministic $O(1)$ | **0.000061 s** | **~46.64x Faster** | Predictable Real-Time |
-
----
-
-## 5. Industrial & Embedded Systems Implications
-* **Execution Predictability:** The memory pool design achieved a **~46.64x execution speedup** by avoiding heap locking, bin traversals, and kernel context overheads[cite: 5].
-* **Mission-Critical Software:** For high-throughput automotive telemetry (CAN/LIN), industrial Ethernet (Modbus/EtherCAT), and Edge IoT Gateways, dynamic runtime `malloc` should be restricted. Pre-allocated memory pools guarantee deterministic worst-case execution time (WCET) and prevent heap exhaustion during sustained uptime.
+*   **Memory allocation overhead:** Việc gọi `malloc()/free()` liên tục trong các vòng lặp tính Tensor buộc User-space phải gọi Syscall xuống Kernel-space, làm CPU phải chờ đợi HĐH (Overhead cao).
+*   **Tensor allocation:** Các Tensors trong mạng Neural thay đổi kích thước theo từng Layer. Nếu không quản lý tốt sẽ gây phân mảnh bộ nhớ (Memory fragmentation).
+*   **Memory Pool & Memory Reuse (Tối ưu thiết yếu):**
+    *   **Pre-allocate:** Xin OS cấp một vùng RAM khổng lồ duy nhất lúc khởi động (Memory Pool).
+    *   **Reuse:** Khi một Tensor không dùng nữa, thay vì `free()` trả OS, ta đưa vùng nhớ đó vào danh sách chờ. Khi cần tạo Tensor mới, ta tái sử dụng (Reuse) trực tiếp vùng nhớ này (Time complexity: $O(1)$).
+*   **Zero-copy:** Kỹ thuật truyền dữ liệu trực tiếp từ ổ cứng/card mạng vào RAM mà không cần CPU tham gia sao chép (bằng công nghệ DMA), tiết kiệm tài nguyên CPU.
+*   **Shared memory:** Đẩy dữ liệu qua lại giữa các Process (ví dụ: IPC `shmget`) mà không cần thông qua đường ống (Pipe/Socket), dữ liệu được đọc/ghi trực tiếp trên cùng một phân vùng vật lý.
