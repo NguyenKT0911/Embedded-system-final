@@ -71,6 +71,9 @@ void pool_free(MemoryPool* pool, void* ptr) {
     block->next = pool->free_list;
     pool->free_list = block;
 }
+```
+---
+
 ## 4. Empirical Evaluation & Visual Verification
 
 ### Verification Artifact
