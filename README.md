@@ -1,4 +1,6 @@
 # Embedded-system-final
+## Noi dung bao cao
+https://docs.google.com/document/d/1T9d9SH2_-tvVaoI5Z1nzo7DpXYqbaO0fYUxt1mw8NE8/edit?hl=vi&tab=t.idfadetx3mhb
 # Linux
 ---
 
