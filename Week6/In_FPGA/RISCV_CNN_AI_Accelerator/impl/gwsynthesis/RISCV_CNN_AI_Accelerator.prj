@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW2AR-18C" package="QFN88" speed="8" partNumber="GW2AR-LV18QN88C8/I7"/>
+    <FileList>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_compute_core.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_control_top.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_controller.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_mmio.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_top.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_validation.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\compute_tile_4x4.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\conv_address_generator_4x4.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\conv_compute_datapath_4x4.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\conv_data_feeder_4x4.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\conv_sequencer_4x4.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\convolution_engine_4x4.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\data_feeder.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\mac_unit.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\output_buffer.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\output_path.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\output_tile_writer.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\pe.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\pe_array_4x4.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\relu_unit.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_ai_soc.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_cpu_bus.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\input_buffer.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\weight_buffer.v" type="verilog"/>
+        <File path="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_ai_fpga_top.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="global_freq" value="100.000"/>
+        <Option type="looplimit" value="8192"/>
+        <Option type="output_file" value="E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\impl\gwsynthesis\RISCV_CNN_AI_Accelerator.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="0"/>
+        <Option type="top_module" value="riscv_ai_fpga_top"/>
+        <Option type="vcc" value="1.0"/>
+        <Option type="verilog_language" value="verilog-2001"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>

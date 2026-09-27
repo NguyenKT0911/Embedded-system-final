@@ -1,0 +1,802 @@
+[
+    {
+        "sample_id": "0000",
+        "file_name": "sample_0000.png",
+        "label": 2,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0001",
+        "file_name": "sample_0001.png",
+        "label": 3,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0002",
+        "file_name": "sample_0002.png",
+        "label": 0,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0003",
+        "file_name": "sample_0003.png",
+        "label": 1,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0004",
+        "file_name": "sample_0004.png",
+        "label": 9,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0005",
+        "file_name": "sample_0005.png",
+        "label": 9,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0006",
+        "file_name": "sample_0006.png",
+        "label": 3,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0007",
+        "file_name": "sample_0007.png",
+        "label": 5,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0008",
+        "file_name": "sample_0008.png",
+        "label": 8,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0009",
+        "file_name": "sample_0009.png",
+        "label": 2,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0010",
+        "file_name": "sample_0010.png",
+        "label": 3,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0011",
+        "file_name": "sample_0011.png",
+        "label": 7,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0012",
+        "file_name": "sample_0012.png",
+        "label": 1,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0013",
+        "file_name": "sample_0013.png",
+        "label": 4,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0014",
+        "file_name": "sample_0014.png",
+        "label": 4,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0015",
+        "file_name": "sample_0015.png",
+        "label": 8,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0016",
+        "file_name": "sample_0016.png",
+        "label": 7,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0017",
+        "file_name": "sample_0017.png",
+        "label": 4,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0018",
+        "file_name": "sample_0018.png",
+        "label": 7,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0019",
+        "file_name": "sample_0019.png",
+        "label": 7,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0020",
+        "file_name": "sample_0020.png",
+        "label": 1,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0021",
+        "file_name": "sample_0021.png",
+        "label": 1,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0022",
+        "file_name": "sample_0022.png",
+        "label": 9,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0023",
+        "file_name": "sample_0023.png",
+        "label": 8,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0024",
+        "file_name": "sample_0024.png",
+        "label": 9,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0025",
+        "file_name": "sample_0025.png",
+        "label": 2,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0026",
+        "file_name": "sample_0026.png",
+        "label": 5,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0027",
+        "file_name": "sample_0027.png",
+        "label": 2,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0028",
+        "file_name": "sample_0028.png",
+        "label": 0,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0029",
+        "file_name": "sample_0029.png",
+        "label": 4,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0030",
+        "file_name": "sample_0030.png",
+        "label": 2,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0031",
+        "file_name": "sample_0031.png",
+        "label": 0,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0032",
+        "file_name": "sample_0032.png",
+        "label": 0,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0033",
+        "file_name": "sample_0033.png",
+        "label": 1,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0034",
+        "file_name": "sample_0034.png",
+        "label": 9,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0035",
+        "file_name": "sample_0035.png",
+        "label": 7,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0036",
+        "file_name": "sample_0036.png",
+        "label": 8,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0037",
+        "file_name": "sample_0037.png",
+        "label": 6,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0038",
+        "file_name": "sample_0038.png",
+        "label": 4,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0039",
+        "file_name": "sample_0039.png",
+        "label": 6,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0040",
+        "file_name": "sample_0040.png",
+        "label": 0,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0041",
+        "file_name": "sample_0041.png",
+        "label": 0,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0042",
+        "file_name": "sample_0042.png",
+        "label": 5,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0043",
+        "file_name": "sample_0043.png",
+        "label": 0,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0044",
+        "file_name": "sample_0044.png",
+        "label": 2,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0045",
+        "file_name": "sample_0045.png",
+        "label": 9,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0046",
+        "file_name": "sample_0046.png",
+        "label": 0,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0047",
+        "file_name": "sample_0047.png",
+        "label": 2,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0048",
+        "file_name": "sample_0048.png",
+        "label": 3,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0049",
+        "file_name": "sample_0049.png",
+        "label": 1,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0050",
+        "file_name": "sample_0050.png",
+        "label": 4,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0051",
+        "file_name": "sample_0051.png",
+        "label": 6,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0052",
+        "file_name": "sample_0052.png",
+        "label": 3,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0053",
+        "file_name": "sample_0053.png",
+        "label": 8,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0054",
+        "file_name": "sample_0054.png",
+        "label": 5,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0055",
+        "file_name": "sample_0055.png",
+        "label": 2,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0056",
+        "file_name": "sample_0056.png",
+        "label": 1,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0057",
+        "file_name": "sample_0057.png",
+        "label": 2,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0058",
+        "file_name": "sample_0058.png",
+        "label": 1,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0059",
+        "file_name": "sample_0059.png",
+        "label": 9,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0060",
+        "file_name": "sample_0060.png",
+        "label": 5,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0061",
+        "file_name": "sample_0061.png",
+        "label": 4,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0062",
+        "file_name": "sample_0062.png",
+        "label": 4,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0063",
+        "file_name": "sample_0063.png",
+        "label": 5,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0064",
+        "file_name": "sample_0064.png",
+        "label": 1,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0065",
+        "file_name": "sample_0065.png",
+        "label": 7,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0066",
+        "file_name": "sample_0066.png",
+        "label": 4,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0067",
+        "file_name": "sample_0067.png",
+        "label": 9,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0068",
+        "file_name": "sample_0068.png",
+        "label": 9,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0069",
+        "file_name": "sample_0069.png",
+        "label": 8,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0070",
+        "file_name": "sample_0070.png",
+        "label": 6,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0071",
+        "file_name": "sample_0071.png",
+        "label": 6,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0072",
+        "file_name": "sample_0072.png",
+        "label": 5,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0073",
+        "file_name": "sample_0073.png",
+        "label": 7,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0074",
+        "file_name": "sample_0074.png",
+        "label": 3,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0075",
+        "file_name": "sample_0075.png",
+        "label": 8,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0076",
+        "file_name": "sample_0076.png",
+        "label": 4,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0077",
+        "file_name": "sample_0077.png",
+        "label": 6,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0078",
+        "file_name": "sample_0078.png",
+        "label": 6,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0079",
+        "file_name": "sample_0079.png",
+        "label": 5,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0080",
+        "file_name": "sample_0080.png",
+        "label": 7,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0081",
+        "file_name": "sample_0081.png",
+        "label": 1,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0082",
+        "file_name": "sample_0082.png",
+        "label": 0,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0083",
+        "file_name": "sample_0083.png",
+        "label": 0,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0084",
+        "file_name": "sample_0084.png",
+        "label": 3,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0085",
+        "file_name": "sample_0085.png",
+        "label": 3,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0086",
+        "file_name": "sample_0086.png",
+        "label": 2,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0087",
+        "file_name": "sample_0087.png",
+        "label": 5,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0088",
+        "file_name": "sample_0088.png",
+        "label": 9,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0089",
+        "file_name": "sample_0089.png",
+        "label": 6,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0090",
+        "file_name": "sample_0090.png",
+        "label": 8,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0091",
+        "file_name": "sample_0091.png",
+        "label": 6,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0092",
+        "file_name": "sample_0092.png",
+        "label": 8,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0093",
+        "file_name": "sample_0093.png",
+        "label": 7,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0094",
+        "file_name": "sample_0094.png",
+        "label": 3,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0095",
+        "file_name": "sample_0095.png",
+        "label": 8,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0096",
+        "file_name": "sample_0096.png",
+        "label": 5,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0097",
+        "file_name": "sample_0097.png",
+        "label": 7,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0098",
+        "file_name": "sample_0098.png",
+        "label": 3,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    },
+    {
+        "sample_id": "0099",
+        "file_name": "sample_0099.png",
+        "label": 6,
+        "width": 28,
+        "height": 28,
+        "channels": 1
+    }
+]

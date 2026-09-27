@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="riscv_ai_fpga_top" Register="2" Lut="5" T_Register="1532(2)" T_Alu="3954(0)" T_Lut="8697(5)" T_MULT18X18="2(0)" T_MULTALU36X18="2(0)" T_MULTADDALU18X18="19(0)" T_Bsram="46(0)" T_Ssram="40(0)">
+ <SubModule name="u_soc" Register="2" Lut="19" T_Register="1530(2)" T_Alu="3954(0)" T_Lut="8692(19)" T_MULT18X18="2(0)" T_MULTALU36X18="2(0)" T_MULTADDALU18X18="19(0)" T_Bsram="46(0)" T_Ssram="40(0)">
+  <SubModule name="u_cpu" Register="44" Alu="263" Lut="1332" Ssram="40" T_Register="44(44)" T_Alu="263(263)" T_Lut="1332(1332)" T_Ssram="40(40)"/>
+  <SubModule name="u_imem" Lut="189" T_Lut="189(189)"/>
+  <SubModule name="u_dmem" Lut="8" Bsram="8" T_Lut="8(8)" T_Bsram="8(8)"/>
+  <SubModule name="u_accelerator" T_Register="1484(0)" T_Alu="3691(0)" T_Lut="7144(0)" T_MULT18X18="2(0)" T_MULTALU36X18="2(0)" T_MULTADDALU18X18="19(0)" T_Bsram="38(0)">
+   <SubModule name="u_control" Lut="7" T_Register="226(0)" T_Alu="642(0)" T_Lut="959(7)" T_MULT18X18="2(0)" T_MULTALU36X18="2(0)" T_MULTADDALU18X18="3(0)">
+    <SubModule name="u_mmio" Register="223" Alu="336" Lut="576" T_Register="223(223)" T_Alu="336(336)" T_Lut="576(576)"/>
+    <SubModule name="u_validation" Alu="306" Lut="256" MULT18X18="2" MULTALU36X18="2" MULTADDALU18X18="3" T_Alu="306(306)" T_Lut="256(256)" T_MULT18X18="2(2)" T_MULTALU36X18="2(2)" T_MULTADDALU18X18="3(3)"/>
+    <SubModule name="u_controller" Register="3" Lut="120" T_Register="3(3)" T_Lut="120(120)"/>
+   </SubModule>
+   <SubModule name="u_compute_core" Register="1" Alu="34" Lut="3619" T_Register="1258(1)" T_Alu="3049(34)" T_Lut="6185(3619)" T_MULTADDALU18X18="16(0)" T_Bsram="38(0)">
+    <SubModule name="u_input_buffer" Register="34" Alu="29" Lut="38" Bsram="2" T_Register="34(34)" T_Alu="29(29)" T_Lut="38(38)" T_Bsram="2(2)"/>
+    <SubModule name="u_weight_buffer" Register="34" Alu="29" Lut="37" Bsram="4" T_Register="34(34)" T_Alu="29(29)" T_Lut="37(37)" T_Bsram="4(4)"/>
+    <SubModule name="u_convolution_engine" T_Register="511(0)" T_Alu="2803(0)" T_Lut="1998(0)" T_MULTADDALU18X18="14(0)">
+     <SubModule name="u_sequencer" Register="79" Lut="357" T_Register="79(79)" T_Lut="357(357)"/>
+     <SubModule name="u_datapath" T_Register="432(0)" T_Alu="2803(0)" T_Lut="1641(0)" T_MULTADDALU18X18="14(0)">
+      <SubModule name="u_address_generator" Alu="1611" Lut="955" MULTADDALU18X18="6" T_Alu="1611(1611)" T_Lut="955(955)" T_MULTADDALU18X18="6(6)"/>
+      <SubModule name="u_conv_data_feeder" Register="176" Lut="157" T_Register="176(176)" T_Lut="157(157)"/>
+      <SubModule name="u_pe_array" T_Register="256(0)" T_Alu="1192(0)" T_Lut="529(0)" T_MULTADDALU18X18="8(0)">
+       <SubModule name="pe_00" Lut="1" T_Lut="1(1)" T_MULTADDALU18X18="1(0)">
+        <SubModule name="u_mac" MULTADDALU18X18="1" T_MULTADDALU18X18="1(1)"/>
+       </SubModule>
+       <SubModule name="pe_01" T_MULTADDALU18X18="1(0)">
+        <SubModule name="u_mac" MULTADDALU18X18="1" T_MULTADDALU18X18="1(1)"/>
+       </SubModule>
+       <SubModule name="pe_02" T_MULTADDALU18X18="1(0)">
+        <SubModule name="u_mac" MULTADDALU18X18="1" T_MULTADDALU18X18="1(1)"/>
+       </SubModule>
+       <SubModule name="pe_03" T_MULTADDALU18X18="1(0)">
+        <SubModule name="u_mac" MULTADDALU18X18="1" T_MULTADDALU18X18="1(1)"/>
+       </SubModule>
+       <SubModule name="pe_10" T_MULTADDALU18X18="1(0)">
+        <SubModule name="u_mac" MULTADDALU18X18="1" T_MULTADDALU18X18="1(1)"/>
+       </SubModule>
+       <SubModule name="pe_11" T_MULTADDALU18X18="1(0)">
+        <SubModule name="u_mac" MULTADDALU18X18="1" T_MULTADDALU18X18="1(1)"/>
+       </SubModule>
+       <SubModule name="pe_12" T_MULTADDALU18X18="1(0)">
+        <SubModule name="u_mac" MULTADDALU18X18="1" T_MULTADDALU18X18="1(1)"/>
+       </SubModule>
+       <SubModule name="pe_13" T_MULTADDALU18X18="1(0)">
+        <SubModule name="u_mac" MULTADDALU18X18="1" T_MULTADDALU18X18="1(1)"/>
+       </SubModule>
+       <SubModule name="pe_20" Register="32" T_Register="32(32)" T_Alu="149(0)" T_Lut="66(0)">
+        <SubModule name="u_mac" Alu="149" Lut="66" T_Alu="149(149)" T_Lut="66(66)"/>
+       </SubModule>
+       <SubModule name="pe_21" Register="32" T_Register="32(32)" T_Alu="149(0)" T_Lut="66(0)">
+        <SubModule name="u_mac" Alu="149" Lut="66" T_Alu="149(149)" T_Lut="66(66)"/>
+       </SubModule>
+       <SubModule name="pe_22" Register="32" T_Register="32(32)" T_Alu="149(0)" T_Lut="66(0)">
+        <SubModule name="u_mac" Alu="149" Lut="66" T_Alu="149(149)" T_Lut="66(66)"/>
+       </SubModule>
+       <SubModule name="pe_23" Register="32" T_Register="32(32)" T_Alu="149(0)" T_Lut="66(0)">
+        <SubModule name="u_mac" Alu="149" Lut="66" T_Alu="149(149)" T_Lut="66(66)"/>
+       </SubModule>
+       <SubModule name="pe_30" Register="32" T_Register="32(32)" T_Alu="149(0)" T_Lut="66(0)">
+        <SubModule name="u_mac" Alu="149" Lut="66" T_Alu="149(149)" T_Lut="66(66)"/>
+       </SubModule>
+       <SubModule name="pe_31" Register="32" T_Register="32(32)" T_Alu="149(0)" T_Lut="66(0)">
+        <SubModule name="u_mac" Alu="149" Lut="66" T_Alu="149(149)" T_Lut="66(66)"/>
+       </SubModule>
+       <SubModule name="pe_32" Register="32" T_Register="32(32)" T_Alu="149(0)" T_Lut="66(0)">
+        <SubModule name="u_mac" Alu="149" Lut="66" T_Alu="149(149)" T_Lut="66(66)"/>
+       </SubModule>
+       <SubModule name="pe_33" Register="32" T_Register="32(32)" T_Alu="149(0)" T_Lut="66(0)">
+        <SubModule name="u_mac" Alu="149" Lut="66" T_Alu="149(149)" T_Lut="66(66)"/>
+       </SubModule>
+      </SubModule>
+     </SubModule>
+    </SubModule>
+    <SubModule name="u_output_path" T_Register="678(0)" T_Alu="154(0)" T_Lut="493(0)" T_MULTADDALU18X18="2(0)" T_Bsram="32(0)">
+     <SubModule name="u_output_tile_writer" Register="612" Alu="60" Lut="400" MULTADDALU18X18="2" T_Register="612(612)" T_Alu="60(60)" T_Lut="400(400)" T_MULTADDALU18X18="2(2)"/>
+     <SubModule name="u_output_buffer" Register="66" Alu="94" Lut="93" Bsram="32" T_Register="66(66)" T_Alu="94(94)" T_Lut="93(93)" T_Bsram="32(32)"/>
+    </SubModule>
+   </SubModule>
+  </SubModule>
+ </SubModule>
+</Module>

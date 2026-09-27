@@ -1,0 +1,79 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_compute_core.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_control_top.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_controller.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_mmio.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_top.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_validation.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\compute_tile_4x4.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\conv_address_generator_4x4.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\conv_compute_datapath_4x4.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\conv_data_feeder_4x4.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\conv_sequencer_4x4.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\convolution_engine_4x4.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\data_feeder.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\mac_unit.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\output_buffer.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\output_path.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\output_tile_writer.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\pe.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\pe_array_4x4.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\relu_unit.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_ai_soc.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_cpu_bus.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\input_buffer.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\weight_buffer.v'
+Analyzing Verilog file 'E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_ai_fpga_top.v'
+Compiling module 'riscv_ai_fpga_top'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_ai_fpga_top.v":6)
+Compiling module 'riscv_ai_soc(IMEM_INIT_FILE="conv1_firmware.hex",DMEM_INIT_FILE="conv1_data.hex")'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_ai_soc.v":77)
+Compiling module 'riscv_cpu_bus'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_cpu_bus.v":6)
+Extracting RAM for identifier 'registers'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_cpu_bus.v":49)
+Compiling module 'soc_instruction_memory(INIT_FILE="conv1_firmware.hex")'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_ai_soc.v":3)
+Extracting RAM for identifier 'memory'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_ai_soc.v":10)
+Compiling module 'soc_data_memory(INIT_FILE="conv1_data.hex")'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_ai_soc.v":31)
+Extracting RAM for identifier 'memory'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\riscv_ai_soc.v":45)
+Compiling module 'accelerator_top(BASE_ADDR=32'b01000000000000000000000000000000)'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_top.v":3)
+Compiling module 'accelerator_control_top(BASE_ADDR=32'b01000000000000000000000000000000)'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_control_top.v":3)
+Compiling module 'accelerator_mmio(BASE_ADDR=32'b01000000000000000000000000000000)'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_mmio.v":3)
+Compiling module 'accelerator_validation'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_validation.v":3)
+Compiling module 'accelerator_controller'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_controller.v":3)
+Compiling module 'accelerator_compute_core'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\accelerator_compute_core.v":3)
+Compiling module 'input_buffer'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\input_buffer.v":3)
+Extracting RAM for identifier 'mem'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\input_buffer.v":52)
+Compiling module 'weight_buffer'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\weight_buffer.v":3)
+Extracting RAM for identifier 'mem'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\weight_buffer.v":49)
+Compiling module 'convolution_engine_4x4'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\convolution_engine_4x4.v":3)
+Compiling module 'conv_sequencer_4x4'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\conv_sequencer_4x4.v":3)
+Compiling module 'conv_compute_datapath_4x4'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\conv_compute_datapath_4x4.v":3)
+Compiling module 'conv_address_generator_4x4'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\conv_address_generator_4x4.v":3)
+Compiling module 'conv_data_feeder_4x4'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\conv_data_feeder_4x4.v":3)
+Compiling module 'pe_array_4x4'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\pe_array_4x4.v":3)
+Compiling module 'pe'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\pe.v":3)
+Compiling module 'mac_unit'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\mac_unit.v":3)
+Compiling module 'output_path'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\output_path.v":3)
+Compiling module 'output_tile_writer'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\output_tile_writer.v":3)
+Compiling module 'relu_unit'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\relu_unit.v":3)
+Compiling module 'output_buffer'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\output_buffer.v":3)
+Extracting RAM for identifier 'mem'("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\output_buffer.v":50)
+NOTE  (EX0101) : Current top module is "riscv_ai_fpga_top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "relu_unit" instantiated to "u_relu" is swept in optimizing("E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\output_tile_writer.v":110)
+[95%] Generate netlist file "E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\impl\gwsynthesis\RISCV_CNN_AI_Accelerator.vg" completed
+[100%] Generate report file "E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\impl\gwsynthesis\RISCV_CNN_AI_Accelerator_syn.rpt.html" completed
+GowinSynthesis finish

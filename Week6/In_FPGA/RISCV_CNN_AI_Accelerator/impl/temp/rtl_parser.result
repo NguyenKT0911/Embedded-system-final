@@ -1,0 +1,810 @@
+[
+ {
+  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/compute_tile_4x4.v",
+  "InstLine" : 3,
+  "InstName" : "compute_tile_4x4",
+  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/compute_tile_4x4.v",
+  "ModuleLine" : 3,
+  "ModuleName" : "compute_tile_4x4",
+  "SubInsts" : [
+   {
+    "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/compute_tile_4x4.v",
+    "InstLine" : 80,
+    "InstName" : "u_data_feeder",
+    "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/data_feeder.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "data_feeder"
+   },
+   {
+    "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/compute_tile_4x4.v",
+    "InstLine" : 113,
+    "InstName" : "u_pe_array",
+    "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "pe_array_4x4",
+    "SubInsts" : [
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 106,
+      "InstName" : "pe_00",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 113,
+      "InstName" : "pe_01",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 120,
+      "InstName" : "pe_02",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 127,
+      "InstName" : "pe_03",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 137,
+      "InstName" : "pe_10",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 144,
+      "InstName" : "pe_11",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 151,
+      "InstName" : "pe_12",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 158,
+      "InstName" : "pe_13",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 168,
+      "InstName" : "pe_20",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 175,
+      "InstName" : "pe_21",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 182,
+      "InstName" : "pe_22",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 189,
+      "InstName" : "pe_23",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 199,
+      "InstName" : "pe_30",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 206,
+      "InstName" : "pe_31",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 213,
+      "InstName" : "pe_32",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+      "InstLine" : 220,
+      "InstName" : "pe_33",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "pe",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+        "InstLine" : 24,
+        "InstName" : "u_mac",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "mac_unit"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_ai_fpga_top.v",
+  "InstLine" : 6,
+  "InstName" : "riscv_ai_fpga_top",
+  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_ai_fpga_top.v",
+  "ModuleLine" : 6,
+  "ModuleName" : "riscv_ai_fpga_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_ai_fpga_top.v",
+    "InstLine" : 67,
+    "InstName" : "u_soc",
+    "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_ai_soc.v",
+    "ModuleLine" : 77,
+    "ModuleName" : "riscv_ai_soc",
+    "SubInsts" : [
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_ai_soc.v",
+      "InstLine" : 179,
+      "InstName" : "u_cpu",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_cpu_bus.v",
+      "ModuleLine" : 6,
+      "ModuleName" : "riscv_cpu_bus"
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_ai_soc.v",
+      "InstLine" : 206,
+      "InstName" : "u_imem",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_ai_soc.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "soc_instruction_memory"
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_ai_soc.v",
+      "InstLine" : 214,
+      "InstName" : "u_dmem",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_ai_soc.v",
+      "ModuleLine" : 31,
+      "ModuleName" : "soc_data_memory"
+     },
+     {
+      "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_ai_soc.v",
+      "InstLine" : 228,
+      "InstName" : "u_accelerator",
+      "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_top.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "accelerator_top",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_top.v",
+        "InstLine" : 112,
+        "InstName" : "u_control",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_control_top.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "accelerator_control_top",
+        "SubInsts" : [
+         {
+          "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_control_top.v",
+          "InstLine" : 174,
+          "InstName" : "u_mmio",
+          "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_mmio.v",
+          "ModuleLine" : 3,
+          "ModuleName" : "accelerator_mmio"
+         },
+         {
+          "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_control_top.v",
+          "InstLine" : 227,
+          "InstName" : "u_validation",
+          "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_validation.v",
+          "ModuleLine" : 3,
+          "ModuleName" : "accelerator_validation"
+         },
+         {
+          "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_control_top.v",
+          "InstLine" : 247,
+          "InstName" : "u_controller",
+          "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_controller.v",
+          "ModuleLine" : 3,
+          "ModuleName" : "accelerator_controller"
+         }
+        ]
+       },
+       {
+        "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_top.v",
+        "InstLine" : 171,
+        "InstName" : "u_compute_core",
+        "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_compute_core.v",
+        "ModuleLine" : 3,
+        "ModuleName" : "accelerator_compute_core",
+        "SubInsts" : [
+         {
+          "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_compute_core.v",
+          "InstLine" : 137,
+          "InstName" : "u_input_buffer",
+          "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/input_buffer.v",
+          "ModuleLine" : 3,
+          "ModuleName" : "input_buffer"
+         },
+         {
+          "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_compute_core.v",
+          "InstLine" : 167,
+          "InstName" : "u_weight_buffer",
+          "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/weight_buffer.v",
+          "ModuleLine" : 3,
+          "ModuleName" : "weight_buffer"
+         },
+         {
+          "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_compute_core.v",
+          "InstLine" : 205,
+          "InstName" : "u_convolution_engine",
+          "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/convolution_engine_4x4.v",
+          "ModuleLine" : 3,
+          "ModuleName" : "convolution_engine_4x4",
+          "SubInsts" : [
+           {
+            "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/convolution_engine_4x4.v",
+            "InstLine" : 114,
+            "InstName" : "u_sequencer",
+            "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/conv_sequencer_4x4.v",
+            "ModuleLine" : 3,
+            "ModuleName" : "conv_sequencer_4x4"
+           },
+           {
+            "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/convolution_engine_4x4.v",
+            "InstLine" : 161,
+            "InstName" : "u_datapath",
+            "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/conv_compute_datapath_4x4.v",
+            "ModuleLine" : 3,
+            "ModuleName" : "conv_compute_datapath_4x4",
+            "SubInsts" : [
+             {
+              "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/conv_compute_datapath_4x4.v",
+              "InstLine" : 124,
+              "InstName" : "u_address_generator",
+              "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/conv_address_generator_4x4.v",
+              "ModuleLine" : 3,
+              "ModuleName" : "conv_address_generator_4x4"
+             },
+             {
+              "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/conv_compute_datapath_4x4.v",
+              "InstLine" : 174,
+              "InstName" : "u_conv_data_feeder",
+              "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/conv_data_feeder_4x4.v",
+              "ModuleLine" : 3,
+              "ModuleName" : "conv_data_feeder_4x4"
+             },
+             {
+              "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/conv_compute_datapath_4x4.v",
+              "InstLine" : 213,
+              "InstName" : "u_pe_array",
+              "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+              "ModuleLine" : 3,
+              "ModuleName" : "pe_array_4x4",
+              "SubInsts" : [
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 106,
+                "InstName" : "pe_00",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 113,
+                "InstName" : "pe_01",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 120,
+                "InstName" : "pe_02",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 127,
+                "InstName" : "pe_03",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 137,
+                "InstName" : "pe_10",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 144,
+                "InstName" : "pe_11",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 151,
+                "InstName" : "pe_12",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 158,
+                "InstName" : "pe_13",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 168,
+                "InstName" : "pe_20",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 175,
+                "InstName" : "pe_21",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 182,
+                "InstName" : "pe_22",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 189,
+                "InstName" : "pe_23",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 199,
+                "InstName" : "pe_30",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 206,
+                "InstName" : "pe_31",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 213,
+                "InstName" : "pe_32",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               },
+               {
+                "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+                "InstLine" : 220,
+                "InstName" : "pe_33",
+                "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                "ModuleLine" : 3,
+                "ModuleName" : "pe",
+                "SubInsts" : [
+                 {
+                  "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+                  "InstLine" : 24,
+                  "InstName" : "u_mac",
+                  "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+                  "ModuleLine" : 3,
+                  "ModuleName" : "mac_unit"
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_compute_core.v",
+          "InstLine" : 269,
+          "InstName" : "u_output_path",
+          "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/output_path.v",
+          "ModuleLine" : 3,
+          "ModuleName" : "output_path",
+          "SubInsts" : [
+           {
+            "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/output_path.v",
+            "InstLine" : 71,
+            "InstName" : "u_output_tile_writer",
+            "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/output_tile_writer.v",
+            "ModuleLine" : 3,
+            "ModuleName" : "output_tile_writer",
+            "SubInsts" : [
+             {
+              "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/output_tile_writer.v",
+              "InstLine" : 106,
+              "InstName" : "u_relu",
+              "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/relu_unit.v",
+              "ModuleLine" : 3,
+              "ModuleName" : "relu_unit"
+             }
+            ]
+           },
+           {
+            "InstFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/output_path.v",
+            "InstLine" : 109,
+            "InstName" : "u_output_buffer",
+            "ModuleFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/output_buffer.v",
+            "ModuleLine" : 3,
+            "ModuleName" : "output_buffer"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]

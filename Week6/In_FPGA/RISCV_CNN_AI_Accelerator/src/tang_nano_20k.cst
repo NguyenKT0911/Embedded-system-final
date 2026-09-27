@@ -1,0 +1,21 @@
+// Tang Nano 20K (GW2AR-LV18QN88C8/I7)
+// Onboard 27 MHz oscillator.
+IO_LOC  "sys_clk" 4;
+IO_PORT "sys_clk" IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+
+// KEY1 / S1. The button pulls the signal low, matching reset_n.
+IO_LOC  "reset_n" 88;
+IO_PORT "reset_n" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// Onboard LEDs are active-low; inversion is handled in the top wrapper.
+IO_LOC  "led_busy" 15;
+IO_PORT "led_busy" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led_done" 16;
+IO_PORT "led_done" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "led_error" 17;
+IO_PORT "led_error" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC  "cpu_trap" 18;
+IO_PORT "cpu_trap" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;

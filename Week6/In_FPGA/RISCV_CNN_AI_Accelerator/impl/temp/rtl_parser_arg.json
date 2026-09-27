@@ -1,0 +1,113 @@
+{
+ "Device" : "GW2AR-18C",
+ "Files" : [
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_compute_core.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_control_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_controller.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_mmio.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/accelerator_validation.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/compute_tile_4x4.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/conv_address_generator_4x4.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/conv_compute_datapath_4x4.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/conv_data_feeder_4x4.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/conv_sequencer_4x4.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/convolution_engine_4x4.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/data_feeder.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/input_buffer.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/mac_unit.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/output_buffer.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/output_path.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/output_tile_writer.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/pe_array_4x4.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/relu_unit.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_ai_fpga_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_ai_soc.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/riscv_cpu_bus.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/src/weight_buffer.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 8192,
+ "ResultFile" : "E:/University/Third year/Embedded/In_FPGA/RISCV_CNN_AI_Accelerator/impl/temp/rtl_parser.result",
+ "Top" : "riscv_ai_fpga_top",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

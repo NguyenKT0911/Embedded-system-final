@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ENhttp://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Power Analysis Report</title>
+<style type="text/css">
+body { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+div#main_wrapper { width: 100%; }
+div#content { margin-left: 350px; margin-right: 30px; }
+div#catalog_wrapper {position: fixed; top: 30px; width: 350px; float: left; }
+div#catalog ul { list-style-type: none; }
+div#catalog li { text-align: left; list-style-type:circle; color: #0084ff; margin-top: 3px; margin-bottom: 3px; }
+div#catalog a { display:inline-block; text-decoration: none; color: #0084ff; font-weight: bold; padding: 3px; }
+div#catalog a:visited { color: #0084ff; }
+div#catalog a:hover { color: #fff; background: #0084ff; }
+hr { margin-top: 30px; margin-bottom: 30px; }
+h1, h3 { text-align: center; }
+h1 {margin-top: 50px; }
+table, th, td {white-space:pre;  border: 1px solid #aaa; }
+table { border-collapse:collapse; margin-top: 10px; margin-bottom: 20px; width: 100%; }
+th, td { padding: 5px 5px 5px 5px; }
+th { color: #fff; font-weight: bold; background-color: #0084ff; }
+table.summary_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.thermal_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.Configure_table td.label { width: 24%; min-width: 200px; background-color: #dee8f4; }
+table.detail_table th.label {  min-width: 8%; width: 8%; }
+</style>
+</head>
+<body>
+<div id="main_wrapper">
+<div id="catalog_wrapper">
+<div id="catalog">
+<ul>
+<li><a href="#Message" style=" font-size: 16px;">Power Messages</a>
+<ul>
+<li><a href="#Configure_Info" style=" font-size: 14px;">Configure Information</a></li>
+</ul>
+</li>
+<li><a href="#Summary" style=" font-size: 16px;">Power Summary</a>
+<ul>
+<li><a href="#Power_Info" style=" font-size: 14px;">Power Information</a></li>
+<li><a href="#Thermal_Info" style=" font-size: 14px;">Thermal Information</a></li>
+<li><a href="#Supply_Summary" style=" font-size: 14px;">Supply Information</a></li>
+</ul>
+</li>
+<li><a href="#Detail" style=" font-size: 16px;">Power Details</a>
+<ul>
+<li><a href="#By_Block_Type" style=" font-size: 14px;">Power By Block Type</a></li>
+<li><a href="#By_Hierarchy" style=" font-size: 14px;">Power By Hierarchy</a></li>
+<li><a href="#By_Clock_Domain" style=" font-size: 14px;">Power By Clock Domain</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- catalog -->
+</div><!-- catalog_wrapper -->
+<div id="content">
+<h1><a name="Message">Power Messages</a></h1>
+<table class="summary_table">
+<tr>
+<td class="label">Report Title</td>
+<td>Power Analysis Report</td>
+</tr>
+<tr>
+<td class="label">Design File</td>
+<td>E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\impl\gwsynthesis\RISCV_CNN_AI_Accelerator.vg</td>
+</tr>
+<tr>
+<td class="label">Physical Constraints File</td>
+<td>E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\tang_nano_20k.cst</td>
+</tr>
+<tr>
+<td class="label">Timing Constraints File</td>
+<td>E:\University\Third year\Embedded\In_FPGA\RISCV_CNN_AI_Accelerator\src\RISCV_CNN_AI_Accelerator.sdc</td>
+</tr>
+<tr>
+<td class="label">Tool Version</td>
+<td>V1.9.11.03 Education</td>
+</tr>
+<tr>
+<td class="label">Part Number</td>
+<td>GW2AR-LV18QN88C8/I7</td>
+</tr>
+<tr>
+<td class="label">Device</td>
+<td>GW2AR-18</td>
+</tr>
+<tr>
+<td class="label">Device Version</td>
+<td>C</td>
+</tr>
+<tr>
+<td class="label">Created Time</td>
+<td>Thu Sep 24 10:51:35 2026
+</td>
+</tr>
+<tr>
+<td class="label">Legal Announcement</td>
+<td>Copyright (C)2014-2025 Gowin Semiconductor Corporation. All rights reserved.</td>
+</tr>
+</table>
+<h2><a name="Configure_Info">Configure Information:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label">Grade</td>
+<td>Commercial</td>
+</tr>
+<tr>
+<td class="label">Process</td>
+<td>Typical</td>
+</tr>
+<tr>
+<td class="label">Ambient Temperature</td>
+<td>25.000
+</tr>
+<tr>
+<td class="label">Use Custom Theta JA</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Heat Sink</td>
+<td>None</td>
+</tr>
+<tr>
+<td class="label">Air Flow</td>
+<td>LFM_0</td>
+</tr>
+<tr>
+<td class="label">Use Custom Theta SA</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Board Thermal Model</td>
+<td>None</td>
+</tr>
+<tr>
+<td class="label">Use Custom Theta JB</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Related Vcd File</td>
+<td></td>
+</tr>
+<tr>
+<td class="label">Related Saif File</td>
+<td></td>
+</tr>
+<tr>
+<td class="label">Filter Glitches</td>
+<td>false</td>
+</tr>
+<tr>
+<td class="label">Default IO Toggle Rate</td>
+<td>0.125</td>
+</tr>
+<tr>
+<td class="label">Default Remain Toggle Rate</td>
+<td>0.125</td>
+</tr>
+</table>
+<h1><a name="Summary">Power Summary</a></h1>
+<h2><a name="Power_Info">Power Information:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label">Total Power (mW)</td>
+<td>162.399</td>
+</tr>
+<tr>
+<td class="label">Quiescent Power (mW)</td>
+<td>122.800</td>
+</tr>
+<tr>
+<td class="label">Dynamic Power (mW)</td>
+<td>39.599</td>
+</tr>
+</table>
+<h2><a name="Thermal_Info">Thermal Information:</a></h2>
+<table class="summary_table">
+<tr>
+<td class="label">Junction Temperature</td>
+<td>29.846</td>
+</tr>
+<tr>
+<td class="label">Theta JA</td>
+<td>29.840</td>
+</tr>
+<tr>
+<td class="label">Max Allowed Ambient Temperature</td>
+<td>80.154</td>
+</tr>
+</table>
+<h2><a name="Supply_Summary">Supply Information:</a></h2>
+<table class="summary_table">
+<tr>
+<th class="label">Voltage Source</th>
+<th class="label">Voltage</th>
+<th class="label">Dynamic Current(mA)</th>
+<th class="label">Quiescent Current(mA)</th>
+<th class="label">Power(mW)</th>
+</tr>
+<tr>
+<td>VCC</td>
+<td>1.000</td>
+<td>39.363</td>
+<td>70.000</td>
+<td>109.363</td>
+</tr>
+<tr>
+<td>VCCX</td>
+<td>3.300</td>
+<td>0.036</td>
+<td>15.000</td>
+<td>49.618</td>
+</tr>
+<tr>
+<td>VCCIO33</td>
+<td>3.300</td>
+<td>0.036</td>
+<td>1.000</td>
+<td>3.418</td>
+</tr>
+</table>
+<h1><a name="Detail">Power Details</a></h1>
+<h2><a name="By_Block_Type">Power By Block Type:</a></h2>
+<table class="detail_table">
+<tr>
+<th class="label">Block Type</th>
+<th class="label">Total Power(mW)</th>
+<th class="label">Static Power(mW)</th>
+<th class="label">Average Toggle Rate(millions of transitions/sec)</th>
+</tr>
+<tr>
+<td>Logic</td>
+<td>2.077</td>
+<td>NA</td>
+<td>0.675</td>
+</tr>
+<tr>
+<td>IO</td>
+<td>4.511
+<td>4.240
+<td>1.125
+</tr>
+<tr>
+<td>BSRAM</td>
+<td>33.349
+<td>NA</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>DSP</td>
+<td>3.900
+<td>NA</td>
+<td>0.518
+</tr>
+</table>
+<h2><a name="By_Hierarchy">Power By Hierarchy:</a></h2>
+<table class="detail_table">
+<tr>
+<th class="label">Hierarchy Entity</th>
+<th class="label">Total Power(mW)</th>
+<th class="label">Block Dynamic Power(mW)</th>
+</tr>
+<tr>
+<td>riscv_ai_fpga_top</td>
+<td>39.326</td>
+<td>39.326(39.326)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/</td>
+<td>39.326</td>
+<td>39.326(39.325)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/</td>
+<td>33.193</td>
+<td>33.193(33.193)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/</td>
+<td>31.916</td>
+<td>31.916(31.709)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/</td>
+<td>3.813</td>
+<td>3.813(3.813)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/</td>
+<td>3.792</td>
+<td>3.792(3.792)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_address_generator/</td>
+<td>1.754</td>
+<td>1.754(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_conv_data_feeder/</td>
+<td>0.013</td>
+<td>0.013(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/</td>
+<td>2.025</td>
+<td>2.025(2.025)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_00/</td>
+<td>0.188</td>
+<td>0.188(0.188)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_00/u_mac/</td>
+<td>0.188</td>
+<td>0.188(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_01/</td>
+<td>0.188</td>
+<td>0.188(0.188)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_01/u_mac/</td>
+<td>0.188</td>
+<td>0.188(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_02/</td>
+<td>0.188</td>
+<td>0.188(0.188)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_02/u_mac/</td>
+<td>0.188</td>
+<td>0.188(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_03/</td>
+<td>0.188</td>
+<td>0.188(0.188)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_03/u_mac/</td>
+<td>0.188</td>
+<td>0.188(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_10/</td>
+<td>0.188</td>
+<td>0.188(0.188)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_10/u_mac/</td>
+<td>0.188</td>
+<td>0.188(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_11/</td>
+<td>0.188</td>
+<td>0.188(0.188)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_11/u_mac/</td>
+<td>0.188</td>
+<td>0.188(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_12/</td>
+<td>0.188</td>
+<td>0.188(0.188)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_12/u_mac/</td>
+<td>0.188</td>
+<td>0.188(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_13/</td>
+<td>0.188</td>
+<td>0.188(0.188)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_13/u_mac/</td>
+<td>0.188</td>
+<td>0.188(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_20/</td>
+<td>0.065</td>
+<td>0.065(0.064)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_20/u_mac/</td>
+<td>0.064</td>
+<td>0.064(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_21/</td>
+<td>0.065</td>
+<td>0.065(0.064)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_21/u_mac/</td>
+<td>0.064</td>
+<td>0.064(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_22/</td>
+<td>0.065</td>
+<td>0.065(0.064)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_22/u_mac/</td>
+<td>0.064</td>
+<td>0.064(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_23/</td>
+<td>0.065</td>
+<td>0.065(0.064)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_23/u_mac/</td>
+<td>0.064</td>
+<td>0.064(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_30/</td>
+<td>0.065</td>
+<td>0.065(0.064)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_30/u_mac/</td>
+<td>0.064</td>
+<td>0.064(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_31/</td>
+<td>0.065</td>
+<td>0.065(0.064)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_31/u_mac/</td>
+<td>0.064</td>
+<td>0.064(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_32/</td>
+<td>0.065</td>
+<td>0.065(0.064)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_32/u_mac/</td>
+<td>0.064</td>
+<td>0.064(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_33/</td>
+<td>0.065</td>
+<td>0.065(0.064)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_datapath/u_pe_array/pe_33/u_mac/</td>
+<td>0.064</td>
+<td>0.064(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_convolution_engine/u_sequencer/</td>
+<td>0.021</td>
+<td>0.021(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_input_buffer/</td>
+<td>1.629</td>
+<td>1.629(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_output_path/</td>
+<td>23.170</td>
+<td>23.170(23.170)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_output_path/u_output_buffer/</td>
+<td>22.746</td>
+<td>22.746(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_output_path/u_output_tile_writer/</td>
+<td>0.425</td>
+<td>0.425(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_compute_core/u_weight_buffer/</td>
+<td>3.096</td>
+<td>3.096(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_control/</td>
+<td>1.277</td>
+<td>1.277(1.276)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_control/u_controller/</td>
+<td>0.006</td>
+<td>0.006(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_control/u_mmio/</td>
+<td>0.172</td>
+<td>0.172(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_accelerator/u_control/u_validation/</td>
+<td>1.098</td>
+<td>1.098(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_cpu/</td>
+<td>0.173</td>
+<td>0.173(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_dmem/</td>
+<td>5.949</td>
+<td>5.949(0.000)</td>
+<tr>
+<td>riscv_ai_fpga_top/u_soc/u_imem/</td>
+<td>0.010</td>
+<td>0.010(0.000)</td>
+</table>
+<h2><a name="By_Clock_Domain">Power By Clock Domain:</a></h2>
+<table class="detail_table">
+<tr>
+<th class="label">Clock Domain</th>
+<th class="label">Clock Frequency(Mhz)</th>
+<th class="label">Total Dynamic Power(mW)</th>
+</tr>
+<tr>
+<td>soc_clk</td>
+<td>5.400</td>
+<td>39.328</td>
+</tr>
+</table>
+</div><!-- content -->
+</div><!-- main_wrapper -->
+</body>
+</html>
