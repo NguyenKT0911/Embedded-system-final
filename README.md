@@ -116,7 +116,7 @@ Chạy toàn bộ kiểm thử:
 
 - Báo cáo đầy đủ: [`Final_Project.pdf`](Final_Project.pdf)
 - Bản tóm tắt: [`Summary.pdf`](Summary.pdf)
-- Video trình diễn: [Release v1.0.0](https://github.com/NguyenKT0911/Embedded-system-final/releases/tag/v1.0.0)
+- Video hướng dẫn và trình diễn: [YouTube playlist](https://www.youtube.com/playlist?list=PLU8j17gnRm0I)
 
 Các thành viên có thể tiếp tục bổ sung mã nguồn và tài liệu vào đúng thư mục
 tương ứng trong những lần cập nhật sau.
