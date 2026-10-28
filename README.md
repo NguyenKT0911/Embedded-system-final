@@ -15,7 +15,9 @@ và cách sử dụng dự án.
 | `In_FPGA/RISCV_CNN_AI_Accelerator/tools/` | Công cụ tạo ảnh microSD, nạp firmware qua UART và các tiện ích hỗ trợ. |
 | `In_FPGA/RISCV_CNN_AI_Accelerator/scripts/` | Script build FPGA và chạy các bài kiểm thử tự động. |
 | `Model Training/` | Notebook, script huấn luyện, trọng số, tham số lượng tử INT8 và dữ liệu xuất cho FPGA. |
-| `RISC-V/` | Tài liệu và mã nguồn liên quan đến lõi RISC-V được sử dụng trong hệ thống. |
+| `RISC-V/` | Thiết kế RISC-V single-cycle độc lập và công cụ điều khiển qua UART. |
+| `RISC-V/Code/` | Mã Verilog của CPU RV32I single-cycle tích hợp UART, gồm ALU, control unit, datapath, register file, Instruction/Data Memory, UART RX/TX, UART loader, SoC top và file ràng buộc Tang Nano 20K. |
+| `RISC-V/Controller/` | Chương trình Assembly và các script Python để build chương trình thử nghiệm, nạp `program.bin` vào Instruction Memory qua UART và đọc kết quả kiểm thử. |
 | `Real_Digits/` | Ảnh chữ số thật, dữ liệu đã xử lý, dữ liệu INT8 và các file mô phỏng kiểm thử. |
 | `assets/` | Sơ đồ kiến trúc, ảnh phần cứng, giao diện điều khiển và kết quả trình diễn. |
 
@@ -79,6 +81,34 @@ hợp với máy đang sử dụng.
 
 > **Lưu ý:** `Initialize microSD` ghi trực tiếp lên thẻ nhớ và có thể xóa dữ
 > liệu đang có. Cần kiểm tra đúng ổ đĩa trước khi xác nhận.
+
+## Sử dụng RISC-V single-cycle qua UART
+
+Các file liên quan nằm trong `RISC-V/Code/` và `RISC-V/Controller/`.
+
+1. Sửa chương trình kiểm thử trong `RISC-V/Controller/program.S`.
+2. Cài RISC-V GNU toolchain có các lệnh `riscv-none-elf-gcc`,
+   `riscv-none-elf-objdump` và `riscv-none-elf-objcopy`.
+3. Mở PowerShell tại thư mục controller và build chương trình:
+
+   ```powershell
+   cd ".\RISC-V\Controller"
+   python .\build.py
+   ```
+
+4. Mở `run_program_test.py` và sửa biến `PORT` thành cổng COM của bo mạch
+   (mặc định hiện tại là `COM8`).
+5. Cài PySerial rồi nạp `program.bin` vào Instruction Memory qua UART:
+
+   ```powershell
+   python -m pip install pyserial
+   python .\run_program_test.py
+   ```
+
+`run_program_test.py` sử dụng baud rate `115200`, gửi chương trình vào
+Instruction Memory và chờ kết quả của sáu nhóm kiểm thử RV32I trả về qua UART.
+Script `build.py` có tham chiếu tới `bin2hex.ps1`; cần đặt file này trong
+`RISC-V/Controller/` nếu muốn tạo thêm `program.hex`.
 
 ## Build và kiểm thử
 
