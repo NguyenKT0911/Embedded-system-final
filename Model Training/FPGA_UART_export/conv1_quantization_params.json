@@ -1,0 +1,7 @@
+{
+  "activation_scale": 0.02221643079922894,
+  "activation_zero_point": 0,
+  "weight_scale": 0.005349727127495713,
+  "weight_zero_point": 0,
+  "output_real_scale": 0.00011885184252276632
+}

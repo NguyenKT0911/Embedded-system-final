@@ -1,0 +1,61 @@
+// Tang Nano 20K, GW2AR-LV18QN88C8/I7.
+
+IO_LOC  "sys_clk" 4;
+IO_PORT "sys_clk" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+
+// S1 and S2 idle low and become high while pressed.
+IO_LOC  "run_btn" 88;
+IO_PORT "run_btn" IO_TYPE=LVCMOS33 PULL_MODE=DOWN SINGLE_RESISTOR=ON BANK_VCCIO=3.3;
+IO_LOC  "digit_btn" 87;
+IO_PORT "digit_btn" IO_TYPE=LVCMOS33 PULL_MODE=DOWN SINGLE_RESISTOR=ON BANK_VCCIO=3.3;
+
+// Dedicated external UART Loader button: connect pin 72 to 3V3 while pressed.
+// The internal pull-down keeps the input low when the button is released.
+IO_LOC  "uart_boot_btn" 72;
+IO_PORT "uart_boot_btn" IO_TYPE=LVCMOS33 PULL_MODE=DOWN BANK_VCCIO=3.3;
+
+// Onboard BL616 USB-to-UART bridge.  No external CP2102 is required:
+// FPGA pin 70 receives BL616 UART_TX; FPGA pin 69 drives BL616 UART_RX.
+IO_LOC  "uart_rx" 70;
+IO_PORT "uart_rx" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC  "uart_tx" 69;
+IO_PORT "uart_tx" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+
+// Onboard TF/microSD socket in SPI mode: DAT3=CS, CMD=MOSI, DAT0=MISO.
+IO_LOC  "sd_clk" 83;
+IO_PORT "sd_clk" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC  "sd_cmd" 82;
+IO_PORT "sd_cmd" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC  "sd_dat0" 84;
+IO_PORT "sd_dat0" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC  "sd_dat1" 85;
+IO_PORT "sd_dat1" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC  "sd_dat2" 80;
+IO_PORT "sd_dat2" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC  "sd_dat3" 81;
+IO_PORT "sd_dat3" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+
+// Original four status LEDs plus explicit heartbeat and HDMI-lock LEDs.
+IO_LOC  "led_busy" 15;
+IO_PORT "led_busy" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC  "led_done" 16;
+IO_PORT "led_done" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC  "led_error" 17;
+IO_PORT "led_error" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC  "cpu_trap" 18;
+IO_PORT "cpu_trap" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC  "led_heartbeat" 19;
+IO_PORT "led_heartbeat" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC  "led_hdmi" 20;
+IO_PORT "led_hdmi" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+
+// Onboard HDMI connector. Each positive port is constrained to the complete
+// P/N pair; ELVDS_OBUF creates the complementary negative output.
+IO_LOC  "tmds_clk_p" 33,34;
+IO_PORT "tmds_clk_p" IO_TYPE=LVCMOS33D PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC  "tmds_d_p[0]" 35,36;
+IO_PORT "tmds_d_p[0]" IO_TYPE=LVCMOS33D PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC  "tmds_d_p[1]" 37,38;
+IO_PORT "tmds_d_p[1]" IO_TYPE=LVCMOS33D PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
+IO_LOC  "tmds_d_p[2]" 39,40;
+IO_PORT "tmds_d_p[2]" IO_TYPE=LVCMOS33D PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;

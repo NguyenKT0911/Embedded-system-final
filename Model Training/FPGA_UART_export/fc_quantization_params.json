@@ -1,0 +1,6 @@
+{
+  "conv1_weight_scale": 0.005349727127495713,
+  "conv2_weight_scale": 0.004437702847278025,
+  "fc1_weight_scale": 0.0037396618231075015,
+  "fc2_weight_scale": 0.0030363903740259607
+}

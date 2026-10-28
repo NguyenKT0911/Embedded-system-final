@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW2AR-18C" pn="GW2AR-LV18QN88C8/I7">gw2ar18c-000</Device>
+    <FileList>
+        <File path="src/accelerator_compute_core.v" type="file.verilog" enable="1"/>
+        <File path="src/accelerator_control_top.v" type="file.verilog" enable="1"/>
+        <File path="src/accelerator_controller.v" type="file.verilog" enable="1"/>
+        <File path="src/accelerator_mmio.v" type="file.verilog" enable="1"/>
+        <File path="src/accelerator_top.v" type="file.verilog" enable="1"/>
+        <File path="src/accelerator_validation.v" type="file.verilog" enable="1"/>
+        <File path="src/compute_tile_4x4.v" type="file.verilog" enable="1"/>
+        <File path="src/conv_address_generator_4x4.v" type="file.verilog" enable="1"/>
+        <File path="src/conv_compute_datapath_4x4.v" type="file.verilog" enable="1"/>
+        <File path="src/conv_data_feeder_4x4.v" type="file.verilog" enable="1"/>
+        <File path="src/conv_sequencer_4x4.v" type="file.verilog" enable="1"/>
+        <File path="src/convolution_engine_4x4.v" type="file.verilog" enable="1"/>
+        <File path="src/data_feeder.v" type="file.verilog" enable="1"/>
+        <File path="src/input_buffer.v" type="file.verilog" enable="1"/>
+        <File path="src/mac_unit.v" type="file.verilog" enable="1"/>
+        <File path="src/output_buffer.v" type="file.verilog" enable="1"/>
+        <File path="src/output_path.v" type="file.verilog" enable="1"/>
+        <File path="src/output_tile_writer.v" type="file.verilog" enable="1"/>
+        <File path="src/pe.v" type="file.verilog" enable="1"/>
+        <File path="src/pe_array_4x4.v" type="file.verilog" enable="1"/>
+        <File path="src/relu_unit.v" type="file.verilog" enable="1"/>
+        <File path="src/weight_buffer.v" type="file.verilog" enable="1"/>
+        <File path="src/riscv_cpu_bus.v" type="file.verilog" enable="1"/>
+        <File path="src/uart_rx.v" type="file.verilog" enable="1"/>
+        <File path="src/uart_tx.v" type="file.verilog" enable="1"/>
+        <File path="src/uart_bootloader.v" type="file.verilog" enable="1"/>
+        <File path="src/uart_mmio.v" type="file.verilog" enable="1"/>
+        <File path="src/result_mmio.v" type="file.verilog" enable="1"/>
+        <File path="src/sd_spi_mmio.v" type="file.verilog" enable="1"/>
+        <File path="src/riscv_ai_soc.v" type="file.verilog" enable="1"/>
+        <File path="src/tmds_encoder.v" type="file.verilog" enable="1"/>
+        <File path="src/hdmi_digit_renderer.v" type="file.verilog" enable="1"/>
+        <File path="src/hdmi_top.v" type="file.verilog" enable="1"/>
+        <File path="src/tang_nano_20k_top.v" type="file.verilog" enable="1"/>
+        <File path="src/tang_nano_20k.cst" type="file.cst" enable="1"/>
+        <File path="src/tang_nano_20k.sdc" type="file.sdc" enable="1"/>
+    </FileList>
+</Project>

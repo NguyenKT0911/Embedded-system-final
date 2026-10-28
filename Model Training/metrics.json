@@ -1,0 +1,6 @@
+{
+  "float32_accuracy_percent": 99.5,
+  "int8_simulated_accuracy_percent": 99.5,
+  "target_accuracy_percent": 99.5,
+  "target_achieved": true
+}

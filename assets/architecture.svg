@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
+  <title id="title">RISC-V controlled INT8 CNN accelerator architecture</title>
+  <desc id="desc">A host computer loads firmware over UART. An RV32I processor coordinates memory, a 4 by 4 CNN accelerator, microSD storage, and an HDMI result renderer.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#0c2338"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102a42"/>
+      <stop offset="1" stop-color="#091827"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#62d9ff" stroke-opacity=".045"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#62d9ff"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="720" rx="30" fill="url(#bg)"/>
+  <rect width="1400" height="720" rx="30" fill="url(#grid)"/>
+  <text x="64" y="66" fill="#62d9ff" font-family="ui-monospace, monospace" font-size="18" font-weight="700" letter-spacing="3">IMPLEMENTED SYSTEM ARCHITECTURE</text>
+  <text x="64" y="98" fill="#8ca5b8" font-family="Arial, sans-serif" font-size="17">Tang Nano 20K · RV32I · signed INT8 convolution · firmware-managed I/O</text>
+
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(70 220)">
+      <rect width="240" height="155" rx="18" fill="url(#node)" stroke="#62d9ff" stroke-opacity=".5"/>
+      <text x="24" y="34" fill="#62d9ff" font-family="ui-monospace, monospace" font-size="14" font-weight="700">HOST</text>
+      <text x="24" y="75" fill="#f5f8fb" font-size="24" font-weight="700">Python control</text>
+      <text x="24" y="106" fill="#9bb0c0" font-size="16">Bitstream · firmware · data</text>
+      <text x="24" y="132" fill="#70e1a1" font-size="14">UART 115200 · CRC32</text>
+    </g>
+
+    <g transform="translate(450 190)">
+      <rect width="300" height="215" rx="22" fill="url(#node)" stroke="#62d9ff" stroke-width="2"/>
+      <text x="26" y="36" fill="#62d9ff" font-family="ui-monospace, monospace" font-size="14" font-weight="700">CONTROL PLANE</text>
+      <text x="26" y="80" fill="#f5f8fb" font-size="28" font-weight="700">RV32I processor</text>
+      <text x="26" y="115" fill="#9bb0c0" font-size="17">IMEM 8 KiB · DMEM 8 KiB</text>
+      <line x1="26" y1="140" x2="274" y2="140" stroke="#62d9ff" stroke-opacity=".18"/>
+      <text x="26" y="171" fill="#f2ba5c" font-size="15">Pooling · requantization</text>
+      <text x="26" y="197" fill="#f2ba5c" font-size="15">FC1 · FC2 · Argmax</text>
+    </g>
+
+    <g transform="translate(910 166)">
+      <rect width="390" height="265" rx="22" fill="url(#node)" stroke="#62d9ff" stroke-width="2"/>
+      <text x="26" y="36" fill="#62d9ff" font-family="ui-monospace, monospace" font-size="14" font-weight="700">DATA PLANE</text>
+      <text x="26" y="76" fill="#f5f8fb" font-size="27" font-weight="700">INT8 CNN accelerator</text>
+      <text x="26" y="106" fill="#9bb0c0" font-size="16">Conv1 / Conv2 + ReLU in RTL</text>
+      <g transform="translate(27 132)">
+        <g fill="#143a55" stroke="#62d9ff" stroke-opacity=".72">
+          <rect width="42" height="42" rx="5"/><rect x="52" width="42" height="42" rx="5"/><rect x="104" width="42" height="42" rx="5"/><rect x="156" width="42" height="42" rx="5"/>
+          <rect y="52" width="42" height="42" rx="5"/><rect x="52" y="52" width="42" height="42" rx="5"/><rect x="104" y="52" width="42" height="42" rx="5"/><rect x="156" y="52" width="42" height="42" rx="5"/>
+          <rect y="104" width="42" height="42" rx="5"/><rect x="52" y="104" width="42" height="42" rx="5"/><rect x="104" y="104" width="42" height="42" rx="5"/><rect x="156" y="104" width="42" height="42" rx="5"/>
+          <rect y="156" width="42" height="42" rx="5"/><rect x="52" y="156" width="42" height="42" rx="5"/><rect x="104" y="156" width="42" height="42" rx="5"/><rect x="156" y="156" width="42" height="42" rx="5"/>
+        </g>
+        <text x="226" y="32" fill="#62d9ff" font-size="19" font-weight="700">4 × 4 PE</text>
+        <text x="226" y="62" fill="#9bb0c0" font-size="14">16 MAC/cycle peak</text>
+        <text x="226" y="91" fill="#9bb0c0" font-size="14">INT8 × INT8</text>
+        <text x="226" y="116" fill="#9bb0c0" font-size="14">→ INT32 accumulate</text>
+        <text x="226" y="164" fill="#70e1a1" font-size="14">Output-stationary</text>
+      </g>
+    </g>
+
+    <path d="M310 298H445" fill="none" stroke="#62d9ff" stroke-width="3" marker-end="url(#arrow)" filter="url(#glow)"/>
+    <text x="344" y="282" fill="#8ca5b8" font-family="ui-monospace, monospace" font-size="13">UART</text>
+    <path d="M750 298H905" fill="none" stroke="#62d9ff" stroke-width="3" marker-end="url(#arrow)" filter="url(#glow)"/>
+    <text x="798" y="282" fill="#8ca5b8" font-family="ui-monospace, monospace" font-size="13">MMIO</text>
+
+    <g transform="translate(450 510)">
+      <rect width="250" height="120" rx="16" fill="url(#node)" stroke="#f2ba5c" stroke-opacity=".6"/>
+      <text x="22" y="32" fill="#f2ba5c" font-family="ui-monospace, monospace" font-size="13" font-weight="700">STORAGE</text>
+      <text x="22" y="69" fill="#f5f8fb" font-size="22" font-weight="700">microSD / SPI</text>
+      <text x="22" y="96" fill="#9bb0c0" font-size="15">Model + 100 sample slots</text>
+    </g>
+    <path d="M575 510V410" fill="none" stroke="#f2ba5c" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+    <g transform="translate(1010 510)">
+      <rect width="250" height="120" rx="16" fill="url(#node)" stroke="#70e1a1" stroke-opacity=".6"/>
+      <text x="22" y="32" fill="#70e1a1" font-family="ui-monospace, monospace" font-size="13" font-weight="700">PRESENTATION</text>
+      <text x="22" y="69" fill="#f5f8fb" font-size="22" font-weight="700">Result MMIO + HDMI</text>
+      <text x="22" y="96" fill="#9bb0c0" font-size="15">Image · class · confidence</text>
+    </g>
+    <path d="M1135 510V436" fill="none" stroke="#70e1a1" stroke-width="2.5" marker-end="url(#arrow)"/>
+  </g>
+
+  <text x="70" y="676" fill="#6f899c" font-family="ui-monospace, monospace" font-size="13">Verified at RTL block, tensor, firmware/RTL integration, and FPGA implementation levels.</text>
+</svg>

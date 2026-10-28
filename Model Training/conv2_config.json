@@ -1,0 +1,10 @@
+{
+  "input_h": 14,
+  "input_w": 14,
+  "cin": 16,
+  "cout": 32,
+  "kernel": 3,
+  "stride": 1,
+  "padding": 1,
+  "relu": true
+}

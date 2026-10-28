@@ -1,0 +1,84 @@
+{
+  "model": "LeNet-inspired CNN for MNIST",
+  "sample_index": 0,
+  "sample_label": 7,
+  "sample_prediction": 7,
+  "float32_test_accuracy_percent": 99.5,
+  "int8_simulated_test_accuracy_percent": 99.5,
+  "quantization": "symmetric per-tensor signed INT8; zero_point=0",
+  "accumulator": "signed INT32",
+  "layers": {
+    "conv1": {
+      "activation_shape": [
+        1,
+        28,
+        28
+      ],
+      "weight_shape": [
+        16,
+        1,
+        3,
+        3
+      ],
+      "golden_output_shape": [
+        16,
+        28,
+        28
+      ],
+      "config": {
+        "input_h": 28,
+        "input_w": 28,
+        "cin": 1,
+        "cout": 16,
+        "kernel": 3,
+        "stride": 1,
+        "padding": 1,
+        "relu": true
+      },
+      "quantization_params": {
+        "activation_scale": 0.02221643079922894,
+        "activation_zero_point": 0,
+        "weight_scale": 0.005349727127495713,
+        "weight_zero_point": 0,
+        "output_real_scale": 0.00011885184252276632
+      },
+      "golden_verified_against_pytorch": true
+    },
+    "conv2": {
+      "activation_shape": [
+        16,
+        14,
+        14
+      ],
+      "weight_shape": [
+        32,
+        16,
+        3,
+        3
+      ],
+      "golden_output_shape": [
+        32,
+        14,
+        14
+      ],
+      "config": {
+        "input_h": 14,
+        "input_w": 14,
+        "cin": 16,
+        "cout": 32,
+        "kernel": 3,
+        "stride": 1,
+        "padding": 1,
+        "relu": true
+      },
+      "quantization_params": {
+        "activation_scale": 0.03777794950590359,
+        "activation_zero_point": 0,
+        "weight_scale": 0.004437702847278025,
+        "weight_zero_point": 0,
+        "output_real_scale": 0.00016764731408667379
+      },
+      "golden_verified_against_pytorch": true
+    }
+  }
+}

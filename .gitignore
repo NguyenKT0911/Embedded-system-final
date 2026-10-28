@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors and operating systems
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# FPGA-generated output
+In_FPGA/RISCV_CNN_AI_Accelerator/impl/
+In_FPGA/RISCV_CNN_AI_Accelerator/build/
+In_FPGA/RISCV_CNN_AI_Accelerator/transcript
+In_FPGA/RISCV_CNN_AI_Accelerator/*.gprj.user
+In_FPGA/RISCV_CNN_AI_Accelerator/sd_image/*.img
+In_FPGA/RISCV_CNN_AI_Accelerator/sd_image/*.hex
+In_FPGA/RISCV_CNN_AI_Accelerator/firmware_c/build/
+*.fs
+*.bin
+*.binx
+*.db
+*.tr
+
+# Large local demonstration media
+*.mp4
+
+# Temporary work
+tmp/
+.github-profile/
+.github-pages/
+.riscv-cnn-portfolio/
