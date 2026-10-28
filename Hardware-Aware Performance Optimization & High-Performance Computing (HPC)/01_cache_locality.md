@@ -17,7 +17,7 @@ This experiment quantifies the hardware performance penalty induced by suboptima
 ---
 
 ## 3. Benchmark Implementation (`cache_test.c`)
-c
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -58,6 +58,7 @@ int main() {
     free(arr);
     return 0;
 }
+```
 
 ---
 
