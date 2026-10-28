@@ -25,3 +25,29 @@
 *  học, hiểu và hoàn thành phần 7. C/C++ Optimization
 *  kết hợp chạy chung và quan sát kết quả
 
+---
+
+## Báo cáo tuần 6
+*  tìm hiểu và chọn model AI Lenet5
+*  chuẩn bị cho phần báo cáo cho các part 1 2 3 4
+
+---
+
+## Báo cáo tuần 7
+*  hoàn thành báo cáo part 1234
+*  tiếp tục làm và học về lenet5 (training, source code gui, source code esp, source samples imagine)
+
+---
+
+## Báo cáo tuần 8
+*  hoàn thành báo cáo part 5
+*  ôn tập lại toàn bộ nội dung Linux
+*  quay video về các ứng dụng của từng phần
+
+---
+
+## Báo cáo tuần 9
+* hoàn thiện báo cáo
+* ôn lại nội dung và chuẩn bị cho vấn đáp
+
+
