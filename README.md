@@ -43,21 +43,21 @@ RV32I CPU.
 |---|---|---|
 | ![Tang Nano 20K hardware demonstration](assets/hardware-demo.jpg) | ![Desktop FPGA control center](assets/control-center.jpg) | ![Handwritten digit inference result](assets/inference-result.jpg) |
 
-The source demonstration video is retained outside the repository because it is
-approximately 140 MB. The still frames above document the board, UART control
-workflow, dataset update path, and HDMI result.
+The full demonstration video is available in the
+[v1.0.0 release](https://github.com/NguyenKT0911/Embedded-system-final/releases/tag/v1.0.0)
+because it is approximately 140 MB. The still frames above document the board,
+UART control workflow, dataset update path, and HDMI result.
 
-## My Role & Contributions
+## About This Repository
 
-This is a **three-member academic team project**. The supplied course report
-lists me, Nguyen Phu Huu, as an implementation-group member and records full
-progress for all three members. It does not provide an auditable module-level
-responsibility breakdown.
+This repository is the shared workspace for a **three-member academic team
+project** focused on developing a RISC-V-based CNN accelerator on the Tang Nano
+20K FPGA board.
 
-To avoid overstating individual ownership, this README treats the processor,
-accelerator, firmware, verification environment, host application, and
-demonstration as **team outputs**. I do not claim sole authorship of any module
-without a member-level responsibility record.
+It brings together the project's documentation, hardware and software sources,
+trained models, host application, test results, and demonstration materials.
+The repository will continue to be expanded as team members add their assigned
+work and supporting files.
 
 ## Key Features
 
