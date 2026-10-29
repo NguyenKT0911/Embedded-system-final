@@ -30,7 +30,7 @@ và cách sử dụng dự án.
 | `requirements.txt` | Danh sách thư viện Python cần cho chương trình điều khiển. |
 | `Final_Project.pdf` | Báo cáo kỹ thuật đầy đủ của đồ án. |
 | `Final_Project.docx` | Bản Word có thể chỉnh sửa của báo cáo đầy đủ. |
-| `RISC-V_CNN_Accelerator_Project_Presentation.pdf` | Presentation tiếng Anh tổng kết kiến trúc, quy trình triển khai, kiểm thử và kết quả của dự án. |
+| `Nhóm 7.pptx` | Presentation tiếng Anh tổng kết kiến trúc, quy trình triển khai, kiểm thử và kết quả của dự án. |
 | `Tìm hiểu về process_AI.md` | Ghi chú về quy trình xử lý AI trong dự án. |
 | `.gitignore` | Loại trừ file build, file tạm và dữ liệu lớn không cần đưa lên GitHub. |
 
