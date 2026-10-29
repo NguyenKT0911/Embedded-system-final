@@ -4,10 +4,6 @@ Kho lưu trữ chung của nhóm cho đồ án nhận dạng chữ số viết t
 
 README này giới thiệu nội dung của từng thư mục và hướng dẫn cách sử dụng các phần chính của repository.
 
-<p align="center">
-  <img src="assets/architecture.svg" alt="System architecture" width="900">
-</p>
-
 ## Thành phần chính
 
 - **FPGA SoC:** CPU RV32I, CNN accelerator, UART bootloader, microSD/SPI, HDMI và các khối ngoại vi.
